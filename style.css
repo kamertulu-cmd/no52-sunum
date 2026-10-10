@@ -133,7 +133,7 @@ section + section { border-top: 1px solid var(--line); }
 
 .product {
   display: grid;
-  grid-template-columns: 120px 1fr auto;
+  grid-template-columns: 224px 1fr auto;
   gap: 1.5rem;
   align-items: center;
   padding: 1.5rem 0;
@@ -141,12 +141,13 @@ section + section { border-top: 1px solid var(--line); }
 }
 
 .product img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 224px;
+  height: 150px;
+  object-fit: contain;
   border-radius: var(--radius);
   background: var(--bg-deep);
-  mix-blend-mode: multiply;
+  padding: 8px;
+  filter: drop-shadow(0 6px 8px rgba(31, 61, 36, 0.28));
 }
 
 .product h3 { font-size: 1.4rem; }
@@ -174,13 +175,13 @@ section + section { border-top: 1px solid var(--line); }
 .button:hover { background: var(--leaf-2); color: var(--paper); }
 
 .product.pending {
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 224px 1fr;
   border-bottom: 1px dashed var(--line);
 }
 
 .product.pending .ph {
-  width: 120px;
-  height: 120px;
+  width: 224px;
+  height: 150px;
   border: 1px dashed var(--leaf-2);
   border-radius: var(--radius);
 }
@@ -362,8 +363,8 @@ footer p { max-width: 70ch; margin: 0; }
 }
 
 @media (max-width: 640px) {
-  .product { grid-template-columns: 88px 1fr; }
-  .product img, .product.pending .ph { width: 88px; height: 88px; }
+  .product, .product.pending { grid-template-columns: 112px 1fr; }
+  .product img, .product.pending .ph { width: 112px; height: 80px; padding: 4px; }
   .price { grid-column: 1 / -1; text-align: left; }
   .gauge { display: none; }
 }
