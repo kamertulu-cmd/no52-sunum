@@ -342,7 +342,7 @@ footer p { max-width: 70ch; margin: 0; }
   transform: translateY(-50%);
   width: 28px;
   height: 84px;
-  z-index: 5;
+  z-index: 50;
   pointer-events: none;
 }
 
@@ -366,7 +366,7 @@ footer p { max-width: 70ch; margin: 0; }
   .product, .product.pending { grid-template-columns: 112px 1fr; }
   .product img, .product.pending .ph { width: 112px; height: 80px; padding: 4px; }
   .price { grid-column: 1 / -1; text-align: left; }
-  .gauge { display: none; }
+  .gauge { right: 0.5rem; top: auto; bottom: 1rem; transform: none; width: 22px; height: 66px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
