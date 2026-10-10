@@ -146,6 +146,7 @@ section + section { border-top: 1px solid var(--line); }
   object-fit: cover;
   border-radius: var(--radius);
   background: var(--bg-deep);
+  mix-blend-mode: multiply;
 }
 
 .product h3 { font-size: 1.4rem; }
